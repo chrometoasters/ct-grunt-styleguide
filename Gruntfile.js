@@ -18,8 +18,8 @@ module.exports = function(grunt) {
 
   -------------------------------------------------------------------------------------*/
 
-  var path =                  require('path');
-  var gruntConfig =          './grunt-config';
+  var path =                          require('path');
+  var projectConfig =                 grunt.file.readJSON('./ct-grunt-config.json');
 
   // Project configuration.
   grunt.initConfig({
@@ -30,24 +30,13 @@ module.exports = function(grunt) {
   /* -------------------------------------------------------------------------------------
 
   PROJECT SETTINGS
-  This should be the only area which you need to edit.
+  This should edited in project-config.json
 
   -------------------------------------------------------------------------------------*/
 
-    project: {
-      root:                           path.resolve(),
-      name:                           'Project Name', // we could do this in package.json but that would make the Grunt less portable
-      node_modules:                   'node_modules',
-      banner:                         '',
-      resources:                      '/PATH/TO/PROJECT-THEME-FOLDER',
-      styleguide_inner_width:         '922px', // note that you may need to set a width on the theme/parent container as well
-      // the following paths are relative to resources:
-      designs:                        '',
-      grunt_styleguide:               'vendor/ct-grunt-styleguide',
-      styles:                         'css',
-      styleguide:                     'styleguide',
-      styleguide_themed:              '/demos/styleguide'
-    },
+    project_root:                     path.resolve(),
+    project:                          projectConfig,
+    project_resources:                '<%= project.resources %>', // TODO: path.dirname() is not working - /htdocs./styleguide
 
   /* -------------------------------------------------------------------------------------
 
@@ -60,7 +49,7 @@ module.exports = function(grunt) {
     clean: {
       styleguide_data: {
           src: [
-              "<%= project.styleguide %>/data/*.html"
+              "<%= project.styleguide.dest %>/data/*.html"
           ]
       },
       // delete the public folder created by kss, as our custom index.html references template/public rather than data/public
@@ -68,9 +57,9 @@ module.exports = function(grunt) {
       // we also delete the stylesheet copies (which include tests) which have been created in styleguide/styles
       styleguide_data_public: {
           src: [
-              "<%= project.styleguide %>/data/public",
-              "<%= project.styleguide %>/styles/*.css",
-              "!<%= project.styleguide %>/styles/styleguide.css"
+              "<%= project.styleguide.dest %>/data/public",
+              "<%= project.styleguide.dest %>/styles/*.css",
+              "!<%= project.styleguide.dest %>/styles/styleguide.css"
           ]
       },
     },
@@ -79,8 +68,8 @@ module.exports = function(grunt) {
     copy: {
       styleguide: {
         expand: true,
-        src: "<%= project.grunt_styleguide %>/template/public/*",
-        dest: "<%= project.styleguide %>/assets",
+        src: "<%= project.styleguide.template %>/public/*",
+        dest: "<%= project.styleguide.dest %>/assets",
         //rename: function(dest, src) {
         //  return dest + src.replace(".tpl", "");
         //},
@@ -89,18 +78,18 @@ module.exports = function(grunt) {
     },
 
     // kss-node [kss_source_folder] [kss_output_source_folder] --template [kss_template_template_folder]
-    // includePath: "/<%= project.root %>/resources/styles/css",
+    // includePath: "/<%= project_root %>/resources/styles/css",
     // files // kss-grunt Gruntfile documentation is buggy, or I"m doing it wrong: https://github.com/t32k/grunt-kss/issues/1
     kss: {
       options: {
-        template: "<%= project.root %>/<%= project.grunt_styleguide %>/template",
+        template: "<%= project_root %>/<%= project.styleguide.template %>",
         includeType: "css" // "to override the automatic preprocessor detection, set this value to css|sass|scss|less|stylus"
       },
       files: {
         src: [
-          "<%= project.root %>/<%= project.styles %>"
+          "<%= project_root %>/<%= project.styleguide.src %>"
         ],
-        dest: "<%= project.root %>/<%= project.styleguide %>/data"
+        dest: "<%= project_root %>/<%= project.styleguide.dest %>/data"
       }
     },
 
@@ -108,25 +97,25 @@ module.exports = function(grunt) {
     'string-replace': {
       styleguide: {
         files: {
-          '<%= project.styleguide %>/index.php' : '<%= project.grunt_styleguide %>/template/index.tpl.php'
+          '<%= project.styleguide.dest %>/index.php' : '<%= project.styleguide.template %>/index.tpl.php'
         },
         options: {
           replacements: [
             {
               pattern: '{{PROJECT_DESIGNS_FOLDER}}',
-              replacement: '<%= project.resources %>/<%= project.designs %>'
+              replacement: '<%= project_resources %>/<%= project.styleguide.designs %>'
             }, {
               pattern: '{{PROJECT_STYLEGUIDE_FOLDER}}',
-              replacement: '<%= project.resources %>/<%= project.styleguide %>'
+              replacement: '<%= project_resources %>/<%= project.styleguide.dest %>'
             }, {
               pattern: '{{PROJECT_STYLEGUIDE_PAGE}}',
-              replacement: '<%= project.styleguide_themed %>/'
+              replacement: '<%= project.styleguide.page %>/'
             }, {
               pattern: '{{PROJECT_STYLEGUIDE_ASSETS_FOLDER}}',
-              replacement: '<%= project.resources %>/<%= project.styleguide %>/assets'
+              replacement: '<%= project_resources %>/<%= project.styleguide.dest %>/assets'
             }, {
               pattern: '{{PROJECT_STYLEGUIDE_WIDTH}}',
-              replacement: '<%= project.styleguide_inner_width %>'
+              replacement: '<%= project.styleguide.width %>'
             }, {
               pattern: '{{PROJECT_NAME}}',
               replacement: '<%= project.name %>'

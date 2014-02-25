@@ -6,7 +6,6 @@ __Please note: this plugin is optimised for internal Chrometoaster use. YMMV.__
 
 ## Installation
 
-1. If you haven't already, please [install Bower](https://github.com/bower/bower)
 1. In Terminal: `cd /PATH/TO/PROJECT-THEME-FOLDER`
 1. `bower install https://github.com/chrometoasters/ct-grunt-styleguide.git`
 
@@ -25,10 +24,14 @@ Note: if you wish to customise where Bower puts installed components, you may ad
 1. `sudo npm install`
 1. SVN/Git ignore the generated folder: `node_modules`
 
-### Customise for your project
+### Set up the Grunt
 
 1. Copy `Gruntfile.js` into your project's theme folder
-1. Edit the `PROJECT SETTINGS` at the top of `Gruntfile.js` to suit your project
+
+### Customise for your project
+
+1. Copy `ct-grunt-config.json` into your project's theme folder
+1. Edit the paths in `ct-grunt-config.json` to suit your project
 1. Create a project template to import the Styleguide page (this can be located in any folder)
 
         // your-styleguide-page.php
@@ -49,4 +52,4 @@ Note: if you wish to customise where Bower puts installed components, you may ad
 ## TODO
 
 1. Manage file paths so that it is possible to run the Grunt from within the vendor folder, rather than having to copy the Gruntfile into the parent directory
-1. Tidy up project variables
+1. Update and copy over `styleguide.md`
