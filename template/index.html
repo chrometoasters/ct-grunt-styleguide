@@ -1,0 +1,169 @@
+<!--
+  Chrometoaster Styleguide
+	styleguide/template/index.html
+	This is the template used by KSS-node to generate the documentation.
+
+  Project-specific customisation is by way of [{PLACEHOLDERS}], which are replaced by the importing PHP file.
+-->
+<!-- START STYLEGUIDE -->
+<div class="kss-wrapper">
+  <div class="kss-content-col ct-doc-wrapper">
+    <h1 class="styleguide-main-title">[{SITE_NAME}] - Living Styleguide</h1>
+    <div id="kss-wrapper" class="styleguide">
+    	<div><a name="ksstop" id="ksstop"></a></div>
+    	<div id="kss-nav" class="ct-docs-nav">
+        <form id="kss-nav-form" action="[{STYLEGUIDE_PATH}]" method="get" class="kss-nojs">
+          <select name="section" id="kss-nav-select" class="kss-select">
+            <option value="0">0.0 About this guide</option>
+            {{#eachRoot}}
+            <option value="{{reference}}">{{reference}}.0 {{header}}</option>
+            {{/eachRoot}}
+          </select>
+          <input type="submit" value="Go" class="submit" />
+          <div class="styleguide-clear"></div>
+          <!-- JS generated select injected here -->
+        </form>
+      </div>
+      <div role="main" id="kss-main">
+        <div id="kss-content">
+          {{#if overview}}
+          	<div id="kss-overview" class="styleguide-explanation ct-docs-textblock">
+              <h4 class="styleguide-modifier-label">
+                <span class="styleguide-category">Overview</span>
+              </h4>
+              <!-- the blurb -->
+            {{html overview}}
+            </div>
+          {{else}}
+
+            {{!
+              Find each section, in order.
+              If there's no markup or modifiers supplied, use a Markdown-only
+              layout instead.
+
+              The "root" element comes first in this loop, and can be detected using
+              the "#whenDepth 1" block as seen below.
+            }}
+            {{#eachSection rootNumber}}
+              {{#whenDepth 1}}
+                <h2 class="ct-docs-heading-2" id="kss-section-{{ reference }}"><span class="kss-ref">{{ reference }}.0</span> - {{ header }}</h2>
+                <div class="styleguide-example kss-nodepth">
+              {{else}}
+    						<!-- then the box -->
+    						<div class="styleguide-example kss-depth-{{ refDepth }}">
+                	<div class="styleguide-html-examples-header">
+    								<h3 class="kss-title-level-{{ refDepth }}" id="kss-section-{{ reference }}"><a class="kss-ref styleguide-anchor" id="kss-section-{{ reference }}-bookmark" href="#kss-section-{{ reference }}-bookmark">Section {{ reference }}</a><span class="styleguide-hidden"> - </span>{{ header }}</h3>
+                  </div>
+              {{/whenDepth}}
+                {{#ifAny markup modifiers}}
+                  <!-- END html examples -->
+                  <div class="styleguide-html-examples">
+                  	{{#if description}}
+                    <div class="kss-box ct-docs-textblock markdown-body styleguide-explanation">
+                    	<h4 class="styleguide-modifier-label">
+                      	<span class="styleguide-category">Description</span>
+                      </h4>
+                      <!-- the blurb -->
+                      {{html description}}
+                    </div>
+                    {{/if}}
+                    <!-- START EXAMPLE MARKUP -->
+                    <div class="kss-markup styleguide-raw-html">
+                      <h4 class="styleguide-modifier-label">
+                        <span class="styleguide-category">HTML Structure</span>
+                      </h4>
+                      <div class="highlight">
+                        <pre class="prettyprint linenums lang-html">{{markup}}</pre>
+                      </div>
+                    </div>
+                    <!-- END EXAMPLE MARKUP -->
+                    <!-- START THE DEFAULT -->
+                    <div class="styleguide-element styleguide-liner styleguide-html-default">
+                      <h4 class="styleguide-modifier-label">
+                      	<span class="styleguide-modifier-type">Default</span>
+                        <span class="styleguide-clear"></span>
+                        <span class="styleguide-modifier-classname-description"><p>The default layout</p></span>
+                      </h4>
+                      <!-- this is the visual example -->
+                      <div class="kss-html-default">
+                        {{modifierMarkup}}
+                        <div class="styleguide-clear"></div>
+                      </div>
+                    </div>
+                    <!-- END THE DEFAULT -->
+                      {{#eachModifier}}
+                    <!-- START THE VARIATION -->
+                    <div class="styleguide-element styleguide-liner styleguide-html-modifier">
+                    	<h4 class="styleguide-modifier-label">
+                      	<span class="styleguide-modifier-type">Variation</span><input type="text" value="{{name}}" class="styleguide-modifier-classname" size="80" autocomplete="off" readonly="readonly" />
+                        <span class="styleguide-clear"></span>
+                        <span class="styleguide-modifier-classname-description">{{html description}}</span>
+                      </h4>
+                      <!-- this is the visual example -->
+                      <div class="kss-html-variation">
+                        {{modifierMarkup}}
+                        <div class="styleguide-clear"></div>
+                      </div>
+                    </div>
+                    <!-- END THE VARIATION -->
+                    {{/eachModifier}}
+                  </div>
+                  <!-- END html examples -->
+                		{{else}}
+                    {{#if description}}
+                  <!-- START DESCRIPTION -->
+                  <!-- this was using kss-para, which was a workaround and only supplied some styles -->
+                  <div class="kss-box styleguide-explanation ct-docs-textblock markdown-body">
+                    <h4 class="styleguide-modifier-label">
+                      <span class="styleguide-category">Description</span>
+                    </h4>
+                    <!-- the blurb -->
+                    {{html description}}
+                  </div>
+                  {{/if}}
+                {{/ifAny}}
+              {{#whenDepth 1}}
+    						</div>
+                <!-- END example (depth) -->
+              {{else}}
+    						</div>
+                <!-- END example (no depth) -->
+              {{/whenDepth}}
+            {{/eachSection}}
+          {{/if}}
+    				</div>
+    			</div>
+          <p class="styleguide-m-link-top"><a href="#">Back to top</a></p>
+    </div>
+  </div>
+  <!-- end kss-content-col -->
+</div>
+<!-- end kss-wrapper -->
+
+
+
+<!-- yup, stylesheets don't belong here, but it works ;-) -->
+<!-- this stylesheet only styles the KSS scaffolding, demo text, and markdown index/overview page -->
+<link rel="stylesheet" type="text/css" href="[{STYLEGUIDE_ASSETS_PATH}]/kss.css" />
+<link rel="stylesheet" type="text/css" href="[{STYLEGUIDE_ASSETS_PATH}]/ct-docs.css" />
+<style type="text/css">
+.styleguide-raw-html,
+.styleguide-explanation,
+.styleguide-html-default,
+.styleguide-list-of-modifiers,
+.styleguide-html-modifier {
+  width: [{STYLEGUIDE_WIDTH}] !important; /* hack for IE6 to make overflow work correctly */  
+}
+</style>
+
+<!-- STYLEGUIDE SCRIPTS -->
+<!-- Note: include jQuery if this is not bundled with the project scripts -->
+<script>
+    var designs_path = "[{STYLEGUIDE_DESIGNS_PATH}]";
+</script>
+<script src="[{STYLEGUIDE_ASSETS_PATH}]/ct-docs.js"></script>
+<script src="[{STYLEGUIDE_ASSETS_PATH}]/prettify.js"></script>
+<script src="[{STYLEGUIDE_ASSETS_PATH}]/jquery.collapse.js"></script>
+<script src="[{STYLEGUIDE_ASSETS_PATH}]/jquery.collapse_storage.js"></script>
+<script src="[{STYLEGUIDE_ASSETS_PATH}]/jquery.collapse_cookie_storage.js"></script>
+<!-- END STYLEGUIDE -->
