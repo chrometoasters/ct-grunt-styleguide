@@ -2,7 +2,7 @@
 
 Chrometoaster's KSS Styleguide generator.
 
-**Please note: this plugin is optimised for internal Chrometoaster use. YMMV. **
+__Please note: this plugin is optimised for internal Chrometoaster use. YMMV.__
 
 ## Installation
 
