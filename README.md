@@ -15,6 +15,7 @@ __Please note: this plugin is optimised for internal Chrometoaster use. YMMV.__
 1. Copy `package.json` into your project's theme folder
 1. In Terminal: `cd /PATH/TO/PROJECT-THEME-FOLDER`
 1. `sudo npm install`
+1. SVN/Git ignore the generated folder: `node_modules`
 
 ### Customise for your project
 
@@ -33,6 +34,7 @@ __Please note: this plugin is optimised for internal Chrometoaster use. YMMV.__
 
 ### Run the Grunt
 
+1. If you haven't used Grunt before, please read [Set up Grunt dependencies](https://github.com/chrometoasters/frontend-grunt-boilerplate#set-up-grunt-dependencies).
 1. In Terminal: `cd /PATH/TO/PROJECT-THEME-FOLDER`
 1. `grunt styleguide`
 

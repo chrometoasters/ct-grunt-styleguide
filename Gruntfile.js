@@ -1,6 +1,6 @@
   /* -------------------------------------------------------------------------------------
 
-  GRUNT BOILERPLATE
+  GRUNT: Styleguide
   http://github.com/chrometoasters/frontend/grunt-boilerplate
 
   -------------------------------------------------------------------------------------*/
@@ -36,10 +36,10 @@ module.exports = function(grunt) {
 
     project: {
       root:                           path.resolve(),
-      name:                           'Sorted', // we could do this in package.json but that would make the Grunt less portable
+      name:                           'Project Name', // we could do this in package.json but that would make the Grunt less portable
       node_modules:                   'node_modules',
       banner:                         '',
-      resources:                      '/sites/all/themes/sorted2',
+      resources:                      '/PATH/TO/PROJECT-THEME-FOLDER',
       styleguide_inner_width:         '922px', // note that you may need to set a width on the theme/parent container as well
       // the following paths are relative to resources:
       designs:                        '',
@@ -180,7 +180,7 @@ module.exports = function(grunt) {
     'string-replace:styleguide',
     'clean:styleguide_data',
     'copy:styleguide',
-    'kss', // note: kss:styleguide fails here, else I would use this convention for consistency
+    'kss', // note: kss:styleguide fails here, otherwise I would use this convention for consistency
     'clean:styleguide_data_public'
   ]);
 

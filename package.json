@@ -1,13 +1,13 @@
 {
   "name": "ct-grunt-styleguide",
-  "description": "Grunt Styleguide Generator",
+  "description": "Chrometoaster's KSS Styleguide Generator",
   "version": "1.0.0",
   "author": "Dan Smith (dan.smith@chrometoaster.com)",
-  "homepage": "http://github.com/chrometoasters/frontend/grunt-boilerplate",
-  "bugs": "http://github.com/chrometoasters/frontend/grunt-boilerplate/issues",
+  "homepage": "http://github.com/chrometoasters/ct-grunt-styleguide",
+  "bugs": "http://github.com/chrometoasters/ct-grunt-styleguide/issues",
   "repository": {
     "type": "git",
-    "url": "http://github.com/chrometoasters/frontend/grunt-boilerplate"
+    "url": "http://github.com/chrometoasters/ct-grunt-styleguide.git"
   },
   "devDependencies": {
     "grunt": "~0.4.1",
