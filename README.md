@@ -38,7 +38,7 @@ Note: if you wish to customise where Bower puts installed components, you may ad
         <!-- header code here -->
         <?php
             // START KSS STYLEGUIDE
-            include( $_SERVER['DOCUMENT_ROOT'] . '/PATH/TO/PROJECT-THEME-FOLDER/styleguide/index.php' );
+            include( $_SERVER['DOCUMENT_ROOT'] . '/PATH/TO/PROJECT-THEME-FOLDER/STYLEGUIDE-DEST/index.php' );
             // END KSS STYLEGUIDE
         ?>
         <!-- footer code here -->
