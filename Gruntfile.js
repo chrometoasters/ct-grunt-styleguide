@@ -1,7 +1,7 @@
   /* -------------------------------------------------------------------------------------
 
   GRUNT: Styleguide
-  http://github.com/chrometoasters/frontend/grunt-boilerplate
+  http://github.com/chrometoasters/ct-grunt-styleguide
 
   -------------------------------------------------------------------------------------*/
 
