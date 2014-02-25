@@ -6,6 +6,7 @@ __Please note: this plugin is optimised for internal Chrometoaster use. YMMV.__
 
 ## Installation
 
+1. If you haven't already, please [install Bower](https://github.com/bower/bower)
 1. In Terminal: `cd /PATH/TO/PROJECT-THEME-FOLDER`
 1. `bower install https://github.com/chrometoasters/ct-grunt-styleguide.git`
 
