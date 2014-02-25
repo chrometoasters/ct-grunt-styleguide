@@ -48,3 +48,4 @@ Note: if you wish to customise where Bower puts installed components, you may ad
 ## TODO
 
 1. Manage file paths so that it is possible to run the Grunt from within the vendor folder, rather than having to copy the Gruntfile into the parent directory
+1. Tidy up project variables
