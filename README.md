@@ -12,7 +12,7 @@ __Please note: this plugin is optimised for internal Chrometoaster use. YMMV.__
 Note: if you wish to customise where Bower puts installed components, you may add a `.bowerrc` file into this folder:
 
         {
-            "directory" : "vendor"
+            "directory" : "PATH/TO/COMPONENTS"
         }
 
 ## Usage
