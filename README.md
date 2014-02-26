@@ -62,8 +62,6 @@ Note: if you wish to customise where Bower puts installed components, you may ad
 1. In Terminal: `cd /PATH/TO/PROJECT-THEME-FOLDER`
 1. `grunt styleguide`
 
-~~~~
-
 ## What is KSS?
 
 KSS is an acronym which stands for 'Knyle Style Sheets'. 'Knyle' is a combination of 'Kyle' + 'Neath'. 
@@ -84,6 +82,34 @@ KSS Node is a NodeJS implementation of KSS.
 
 KSS Node was created by Hugh Kennedy ([hughsk](https://github.com/hughsk/)) 
 and is maintained in [Github](https://github.com/hughsk/kss-node).
+
+## Benefits of using KSS
+
+### Clarity:
+
+* provides an overview of complex stylesheets suitable for clients and other developers
+* provides a reference for developers returning to a project after a long break
+
+### Efficiency:
+
+* visualising stylesheets allows developers to see at a glance whether a style already exists,
+before authoring new styles
+* exposing modifiers encourages development of reusable components that can be skinned
+* reused and resuable code = less code to download, less code to maintain
+* ensure that styles render in full in MSIE6-9 by avoiding the 
+[4095x selector limit in MSIE6-9](http://blogs.msdn.com/b/ieinternals/archive/2011/05/14/internet-explorer-stylesheet-rule-selector-import-sheet-limit-maximum.aspx)
+* automatic styleguide generation is many times more efficient than manually building a PDF or HTML styleguide, 
+and being responsible for its maintenance
+
+### Completeness:
+
+* visual documention provides an easy way to check that there are no bugs, oversights, or redundant rules in the CSS
+
+### Integration:
+
+* HTML demos assist back-end developers and other front-end developers in troubleshooting integration issues, 
+and identifying what is in 'the box of bits'
+* Removes the risk of capturing in appropriate (eg JS-injected) markup when ripping HTML via eg Firebug
 
 ## Debugging common problems
 
