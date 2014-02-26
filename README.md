@@ -62,6 +62,29 @@ Note: if you wish to customise where Bower puts installed components, you may ad
 1. In Terminal: `cd /PATH/TO/PROJECT-THEME-FOLDER`
 1. `grunt styleguide`
 
+~~~~
+
+## What is KSS?
+
+KSS is an acronym which stands for 'Knyle Style Sheets'. 'Knyle' is a combination of 'Kyle' + 'Neath'. 
+Kyle Neath is the Design Director at Github. 
+Read [Kyle's introduction to Knyle Style Sheets](http://warpspire.com/posts/kss/).
+
+KSS involves adding structured comments to CSS files to generate a **Living Styleguide**. 
+These comments create an easily navigable index, 
+live HTML/CSS demos which demonstrate the available style variants, 
+and a place to store any notes which would be useful to the client or fellow developers.
+
+KSS Node was created by Kyle Neath ([kneath](https://github.com/kneath/)) 
+and is maintained on [Github](https://github.com/kneath/kss).
+
+## What is KSS Node?
+
+KSS Node is a NodeJS implementation of KSS. 
+
+KSS Node was created by Hugh Kennedy ([hughsk](https://github.com/hughsk/)) 
+and is maintained in [Github](https://github.com/hughsk/kss-node).
+
 ## Debugging common problems
 
 1. Some modifiers are not output in the styleguide
@@ -282,6 +305,13 @@ There are a handful of `styleguide-` name-spaced classes available for use when 
 1. `.styleguide-divider` - break an example in two, useful for explanatory headings
 1. `.styleguide-nofloat` - disables floating on the element
 1. `.styleguide-hidden` - hides the element
+
+##Credits
+
+* Thanks to Kyle Neath ([kneath](https://github.com/kneath/)) for inventing KSS.
+* Thanks to Hugh Kennedy ([hughsk](https://github.com/hughsk/)) for his work on getting kss-node up and running.
+* Thanks to my employer [Chrometoaster](http://www.chrometoaster.com), for allowing me time to work on this boilerplate, 
+and their interest in new technologies such as KSS.
 
 ## TODO
 
