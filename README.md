@@ -173,7 +173,7 @@ about how widely styles are supported
    * has been wrapped in `<div class="content"></div>` because this is the way the styles have been defined
    * the HTML comments `<!-- START EXAMPLE -->` and `<!-- END EXAMPLE -->` demarcate the portion of the code 
 that should be copied when integrating the code (ie `<div class="content"></div>` must wrap the example  
-markup, but does not need to be included with every component.
+markup, but does not need to be included with every component).
    * can span multiple lines
    * cannot contain any blank lines
    * should include **one** instance of `class="{$modifiers}"`, meaning that your code should be able to be altered at a single point
