@@ -22,7 +22,7 @@ Note: if you wish to customise where Bower puts installed components, you may ad
 1. In Terminal: `sudo npm install -g kss`
 1. This will tell NPM (the Node Package Manager, installed with NodeJS) to install the KSS binary
 
-#### Install KSS-Node dependencies
+### Install KSS-Node dependencies
 
 1. Navigate to your local kss-node directory:
 1. In Terminal: `cd /Users/Dan/github/kss-node/` (Windows: `cd ﻿C:\Files\Websites\GitHub\kss-node`)
