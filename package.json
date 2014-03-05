@@ -1,7 +1,7 @@
 {
   "name": "ct-grunt-styleguide",
   "description": "Chrometoaster's KSS Styleguide Generator",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "author": "Dan Smith (dan.smith@chrometoaster.com)",
   "homepage": "http://github.com/chrometoasters/ct-grunt-styleguide",
   "bugs": "http://github.com/chrometoasters/ct-grunt-styleguide/issues",
@@ -9,11 +9,26 @@
     "type": "git",
     "url": "http://github.com/chrometoasters/ct-grunt-styleguide.git"
   },
+  "project": {
+    "name":         "Site Name",
+    "banner":       "",
+    "resources":    "/path/to/theme",
+    "styleguide":   {
+      "template":     "vendor/ct-grunt-styleguide/template",
+      "src":          "path/to/css",
+      "dest":         "styleguide",
+      "page":         "/path/to/styleguide",
+      "width":        "922px",
+      "designs":      ""
+    }
+  },
   "devDependencies": {
     "grunt": "~0.4.1",
     "grunt-contrib-clean": "~0.5.0",
     "grunt-contrib-copy": "~0.4.1",
     "grunt-kss": "~0.2.1",
-    "grunt-string-replace": "~0.2.7"
+    "grunt-string-replace": "~0.2.7",
+    "load-grunt-tasks": "~0.4.0",
+    "glob": "~3.2.1"
   }
 }

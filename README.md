@@ -1,4 +1,4 @@
-# Grunt: Styleguide
+# Grunt: Styleguide <sup>v1.1.0</sup>
 
 Chrometoaster's KSS Styleguide generator.
 
@@ -43,8 +43,8 @@ Note: if you wish to customise where Bower puts installed components, you may ad
 
 ### Customise for your project
 
-1. Copy `ct-grunt-config.json` into your project's theme folder
-1. Edit the paths in `ct-grunt-config.json` to suit your project
+1. Copy `grunt-tasks` into your project's theme folder; if this folder already exists you will need to manually merge the files contained within the `options` folder
+1. Edit the paths in `package.json` to suit your project
 1. Create a project template to import the Styleguide page (this can be located in any folder)
 
         // your-styleguide-page.php
