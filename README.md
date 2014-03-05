@@ -63,4 +63,4 @@ Note: if you wish to customise where Bower puts installed components, you may ad
 
 ### KSS
 
-If you're unfamiliar with KSS, please read our [docs](https://github.com/chrometoasters/ct-grunt-styleguide/docs/kss/README.md).
+If you're unfamiliar with KSS, please read our [docs](https://github.com/chrometoasters/ct-grunt-styleguide/blob/master/docs/kss/README.md).
