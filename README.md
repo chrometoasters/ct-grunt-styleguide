@@ -59,7 +59,7 @@ Note: if you wish to customise where Bower puts installed components, you may ad
 1. Copy `Gruntfile.js` into your project's theme folder
 1. Copy `grunt-tasks` into your project's theme folder; if this folder already exists you will need to manually merge the files contained within the `options` folder
 1. Open `package.json` and edit the paths to suit your project; note that the `styleguide.src` folder must exist already, but the `styleguide.dest` folder will be created
-1. Create a project template (eg `styleguide.php`) to import the Styleguide page, at the page you specified in `styleguide.page`
+1. Create a project template (eg `styleguide.php`) to import the Styleguide page, at the path you specified in `styleguide.page`
 
         // styleguide.php
         <!-- header code here -->
