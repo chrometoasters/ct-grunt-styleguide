@@ -30,6 +30,10 @@ This project uses the NodeJS implementation of KSS, so you will also need to ins
     1. In Terminal: `cd kss-node`, to change into the directory you just created
     1. In Terminal: `sudo npm install -g` - to instruct NPM to install the `kss-node` dependencies listed in `package.json`. The `-g` ('global') flag instructs OS X to copy the files to `/usr/local/lib/node_modules/kss/`
 
+#### Install Grunt and its dependencies
+
+1. If you haven't used Grunt before, please read [Set up Grunt dependencies](https://github.com/chrometoasters/frontend-grunt-boilerplate#set-up-grunt-dependencies).
+
 ### Every time you set up a new project
 
 #### Install the KSS Grunt Task
@@ -76,6 +80,5 @@ Note that the styleguide requires jQuery, so it your project header does not inc
 
 #### Run the Grunt
 
-1. If you haven't used Grunt before, please read [Set up Grunt dependencies](https://github.com/chrometoasters/frontend-grunt-boilerplate#set-up-grunt-dependencies).
 1. In Terminal: `cd /PATH/TO/PROJECT-THEME-FOLDER`, to change to the project's theme folder
 1. In Terminal: `grunt styleguide`, to run the Grunt task
