@@ -35,7 +35,7 @@ This project uses the node port of KSS, so you will also need to install kss-nod
 
 1. Copy `package.json` into your project's theme folder
 1. In Terminal: `cd /PATH/TO/PROJECT-THEME-FOLDER`, to change to your project's theme directory
-1. In Terminal: `sudo npm install`, to install the `kss-node` dependencies listed in `package.json`
+1. In Terminal: `sudo npm install`, to install the kss grunt task dependencies listed in `package.json`
 1. SVN/Git ignore the generated folder: `node_modules`
 
 ### Set up the Grunt
