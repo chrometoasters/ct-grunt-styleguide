@@ -13,13 +13,13 @@ __Please note: this plugin is optimised for internal Chrometoaster use. YMMV.__
 
 ### One-time setup, for all projects
 
-#### Install KSS dependencies
+#### Install KSS
 
 1. In Terminal: `npm list kss -g`, to check whether you have the kss NPM package installed [[src](http://stackoverflow.com/questions/10972176/find-the-version-of-an-installed-npm-package)]
 1. If KSS is `(empty)`:
     1. In Terminal: `sudo npm install -g kss`, to instruct NPM to install the KSS binary so that is available globally
 
-#### Install KSS-Node dependencies
+#### Install KSS-Node and its dependencies
 
 This project uses the NodeJS implementation of KSS, so you will also need to install `kss-node` from Github:
 
