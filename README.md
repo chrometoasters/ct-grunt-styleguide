@@ -46,7 +46,7 @@ This project uses the node port of KSS, so you will also need to install kss-nod
 
 1. Copy `grunt-tasks` into your project's theme folder; if this folder already exists you will need to manually merge the files contained within the `options` folder
 1. Open `package.json` and edit the paths to suit your project; note that the `styleguide.src` folder must exist already, but the `styleguide.dest` folder will be created
-1. Create a project template (eg `styleguide.php`) to import the Styleguide page (this can be located in any folder)
+1. Create a project template (eg `styleguide.php`) to import the Styleguide page, at the page you specified in `styleguide.page`
 
         // styleguide.php
         <!-- header code here -->
