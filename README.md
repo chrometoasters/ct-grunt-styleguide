@@ -70,7 +70,7 @@ Note: if you wish to customise where Bower puts installed components, you may ad
         ?>
         <!-- footer code here -->
 
-Note that the styleguide requires jQuery, so it your project header does not include this you will need to include this.
+Note that the styleguide requires jQuery, so it your project header does not include this already you will need to add it.
 
 ### Every time you want to regenerate a styleguide
 
