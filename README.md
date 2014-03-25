@@ -23,7 +23,7 @@ Note: if you wish to customise where Bower puts installed components, you may ad
 
 ## Usage
 
-### One-time setup
+### One-time setup, for all projects
 
 #### Install KSS dependencies
 
@@ -42,7 +42,7 @@ This project uses the NodeJS implementation of KSS, so you will also need to ins
     1. In Terminal: `cd kss-node`, to change into the directory you just created
     1. In Terminal: `sudo npm install -g` - to instruct NPM to install the `kss-node` dependencies listed in `package.json`. The `-g` ('global') flag instructs OS X to copy the files to `/usr/local/lib/node_modules/kss/`
 
-### Everytime
+### Every time you set up a new project
 
 #### Install KSS Grunt dependencies
 
@@ -68,6 +68,8 @@ This project uses the NodeJS implementation of KSS, so you will also need to ins
         <!-- footer code here -->
 
 Note that the styleguide requires jQuery, so it your project header does not include this you will need to include this.
+
+### Every time you regenerate a styleguide
 
 #### Run the Grunt
 
