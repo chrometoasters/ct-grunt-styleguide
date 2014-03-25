@@ -14,10 +14,10 @@
     "banner":       "",
     "resources":    "/path/to/theme",
     "styleguide":   {
-      "template":     "vendor/ct-grunt-styleguide/template",
-      "src":          "path/to/css",
-      "dest":         "styleguide",
-      "page":         "/path/to/styleguide",
+      "template":     "bower_components/ct-grunt-styleguide/template",
+      "src":          "path/to/theme/css",
+      "dest":         "path/to/theme/styleguide",
+      "page":         "path/to/theme/styleguide-page.php",
       "width":        "922px",
       "designs":      ""
     }

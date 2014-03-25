@@ -9,16 +9,16 @@ module.exports = {
       replacements: [
         {
           pattern: '{{PROJECT_DESIGNS_FOLDER}}',
-          replacement: '<%= pkg.project.resources %>/<%= pkg.project.styleguide.designs %>'
+          replacement: '<%= pkg.project.styleguide.designs %>'
         }, {
           pattern: '{{PROJECT_STYLEGUIDE_FOLDER}}',
-          replacement: '<%= pkg.project.resources %>/<%= pkg.project.styleguide.dest %>'
+          replacement: '<%= pkg.project.styleguide.dest %>'
         }, {
           pattern: '{{PROJECT_STYLEGUIDE_PAGE}}',
           replacement: '<%= pkg.project.styleguide.page %>/'
         }, {
           pattern: '{{PROJECT_STYLEGUIDE_ASSETS_FOLDER}}',
-          replacement: '<%= pkg.project.resources %>/<%= pkg.project.styleguide.dest %>/assets'
+          replacement: '<%= pkg.project.styleguide.dest %>/assets'
         }, {
           pattern: '{{PROJECT_STYLEGUIDE_WIDTH}}',
           replacement: '<%= pkg.project.styleguide.width %>'
