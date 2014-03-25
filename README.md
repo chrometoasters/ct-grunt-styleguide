@@ -69,7 +69,7 @@ This project uses the NodeJS implementation of KSS, so you will also need to ins
 
 Note that the styleguide requires jQuery, so it your project header does not include this you will need to include this.
 
-### Every time you regenerate a styleguide
+### Every time you want to regenerate a styleguide
 
 #### Run the Grunt
 
