@@ -1,0 +1,31 @@
+/*
+Test
+
+Styleguide 1
+*/
+
+/*
+Test - Button
+
+Markup:
+<button class="{$modifiers}">Button</button>
+
+.red - red
+.green - green
+
+Styleguide 1.1
+*/
+
+button {
+    background: none;
+}
+
+button.red {
+    color: red;
+    border: 1px solid red;
+}
+
+button.green {
+    color: green;
+    border: 1px solid green;
+}

@@ -16,34 +16,44 @@ Note: if you wish to customise where Bower puts installed components, you may ad
             "directory" : "PATH/TO/COMPONENTS"
         }
 
+## Terminology
+
+* KSS - Knyle Style Sheets; if you're unfamiliar with KSS, please read our [docs](https://github.com/chrometoasters/ct-grunt-styleguide/blob/master/docs/kss/README.md)
+* NPM - the Node Package Manager, installed with NodeJS
+
 ## Usage
 
-### Install KSS dependencies
+### One-time setup
 
-1. In Terminal: `sudo npm install -g kss`, to tell NPM (the Node Package Manager, installed with NodeJS) to install the KSS binary
+#### Install KSS dependencies
 
-### Install KSS-Node dependencies
+1. In Terminal: `npm list kss -g`, to check whether you have the kss NPM package installed [[src](http://stackoverflow.com/questions/10972176/find-the-version-of-an-installed-npm-package)]
+1. If KSS is `(empty)`:
+    1. In Terminal: `sudo npm install -g kss`, to instruct NPM to install the KSS binary so that is available globally
 
-This project uses the node port of KSS, so you will also need to install kss-node from Github.
+#### Install KSS-Node dependencies
 
-1. In Terminal: `cd /path/to/github-clones`, to change to the directory where you store your Git clones
-1. In Terminal: `git clone https://github.com/chrometoasters/kss-node.git`, to clone our fork of `kss-node`
-1. In Terminal: `cd kss-node`, to change into the directory you just created
-1. In Terminal: `sudo npm install -g` - to tell NPM (the Node Package Manager, installed with NodeJS) to install the `kss-node` dependencies listed in `package.json`. The `-g` ('global') flag tells OS X to copy the files to `/usr/local/lib/node_modules/kss/`
+This project uses the NodeJS implementation of KSS, so you will also need to install `kss-node` from Github:
 
-### Install KSS Grunt dependencies
+1. TODO: In Terminal: `???`, to check whether you have this installed
+1. If not:
+    1. In Terminal: `cd /path/to/github-clones`, to change to the directory where you store Git repositories that you clone
+    1. In Terminal: `git clone https://github.com/chrometoasters/kss-node.git`, to clone our copy of `kss-node`
+    1. In Terminal: `cd kss-node`, to change into the directory you just created
+    1. In Terminal: `sudo npm install -g` - to instruct NPM to install the `kss-node` dependencies listed in `package.json`. The `-g` ('global') flag instructs OS X to copy the files to `/usr/local/lib/node_modules/kss/`
+
+### Everytime
+
+#### Install KSS Grunt dependencies
 
 1. Copy `package.json` into your project's theme folder
 1. In Terminal: `cd /PATH/TO/PROJECT-THEME-FOLDER`, to change to your project's theme directory
 1. In Terminal: `sudo npm install`, to install the kss grunt task dependencies listed in `package.json`
 1. SVN/Git ignore the generated folder: `node_modules`
 
-### Set up the Grunt
+#### Set up the Grunt and customise for your project
 
 1. Copy `Gruntfile.js` into your project's theme folder
-
-### Customise for your project
-
 1. Copy `grunt-tasks` into your project's theme folder; if this folder already exists you will need to manually merge the files contained within the `options` folder
 1. Open `package.json` and edit the paths to suit your project; note that the `styleguide.src` folder must exist already, but the `styleguide.dest` folder will be created
 1. Create a project template (eg `styleguide.php`) to import the Styleguide page, at the page you specified in `styleguide.page`
@@ -57,12 +67,8 @@ This project uses the node port of KSS, so you will also need to install kss-nod
         ?>
         <!-- footer code here -->
 
-### Run the Grunt
+#### Run the Grunt
 
 1. If you haven't used Grunt before, please read [Set up Grunt dependencies](https://github.com/chrometoasters/frontend-grunt-boilerplate#set-up-grunt-dependencies).
 1. In Terminal: `cd /PATH/TO/PROJECT-THEME-FOLDER`, to change to the project's theme folder
 1. In Terminal: `grunt styleguide`, to run the Grunt task
-
-### KSS
-
-If you're unfamiliar with KSS, please read our [docs](https://github.com/chrometoasters/ct-grunt-styleguide/blob/master/docs/kss/README.md).
