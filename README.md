@@ -67,6 +67,8 @@ This project uses the NodeJS implementation of KSS, so you will also need to ins
         ?>
         <!-- footer code here -->
 
+Note that the styleguide requires jQuery, so it your project header does not include this you will need to include this.
+
 #### Run the Grunt
 
 1. If you haven't used Grunt before, please read [Set up Grunt dependencies](https://github.com/chrometoasters/frontend-grunt-boilerplate#set-up-grunt-dependencies).
