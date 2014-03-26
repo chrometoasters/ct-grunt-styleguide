@@ -12,7 +12,6 @@
   "project": {
     "name":         "Site Name",
     "banner":       "",
-    "resources":    "/path/to/theme",
     "styleguide":   {
       "template":     "bower_components/ct-grunt-styleguide/template",
       "src":          "path/to/theme/css",
