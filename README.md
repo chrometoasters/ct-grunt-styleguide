@@ -13,13 +13,13 @@ __Please note: this plugin is optimised for internal Chrometoaster use. YMMV.__
 
 ### One-time setup, for all projects
 
-#### Install KSS
+#### 1. Install KSS
 
 1. In Terminal: `npm list kss -g`, to check whether you have the kss NPM package installed [[src](http://stackoverflow.com/questions/10972176/find-the-version-of-an-installed-npm-package)]
 1. If KSS is `(empty)`:
     1. In Terminal: `sudo npm install -g kss`, to instruct NPM to install the KSS binary so that is available globally
 
-#### Install KSS-Node and its dependencies
+#### 2. Install KSS-Node and its dependencies
 
 This project uses the NodeJS implementation of KSS, so you will also need to install `kss-node` from Github:
 
@@ -30,13 +30,13 @@ This project uses the NodeJS implementation of KSS, so you will also need to ins
     1. In Terminal: `cd kss-node`, to change into the directory you just created
     1. In Terminal: `sudo npm install -g` - to instruct NPM to install the `kss-node` dependencies listed in `package.json`. The `-g` ('global') flag instructs OS X to copy the files to `/usr/local/lib/node_modules/kss/`
 
-#### Install Grunt and its dependencies
+#### 3. Install Grunt and its dependencies
 
 1. If you haven't used Grunt before, please read [Set up Grunt dependencies](https://github.com/chrometoasters/frontend-grunt-boilerplate#set-up-grunt-dependencies).
 
 ### Every time you set up a new project
 
-#### Install the KSS Grunt Task
+#### 1. Install the KSS Grunt Task
 
 1. In Terminal: `npm list bower -g`, to check whether you have the Bower NPM package installed [[src](http://stackoverflow.com/questions/10972176/find-the-version-of-an-installed-npm-package)]
 1. If Bower is `(empty)`:
@@ -51,14 +51,14 @@ Note: if you wish to customise where Bower puts installed components, you may ad
         }
 
 
-#### Install the KSS Grunt Task's dependencies
+#### 2. Install the KSS Grunt Task's dependencies
 
 1. Copy `package.json` into your project's theme folder
 1. In Terminal: `cd /PATH/TO/PROJECT-THEME-FOLDER`, to change to your project's theme directory
 1. In Terminal: `npm install`, to install the dependencies listed in `package.json`
 1. SVN/Git ignore the generated folder: `node_modules`
 
-#### Set up the KSS Grunt Task and customise for your project
+#### 3. Set up the KSS Grunt Task and customise for your project
 
 1. Copy `Gruntfile.js` into your project's theme folder
 1. Copy `grunt-tasks` into your project's theme folder; if this folder already exists you will need to manually merge the files contained within the `options` folder
@@ -78,7 +78,7 @@ Note that the styleguide requires jQuery, so it your project header does not inc
 
 ### Every time you want to regenerate a styleguide
 
-#### Run the Grunt
+#### 1. Run the Grunt
 
 1. In Terminal: `cd /PATH/TO/PROJECT-THEME-FOLDER`, to change to the project's theme folder
 1. In Terminal: `grunt styleguide`, to run the Grunt task
