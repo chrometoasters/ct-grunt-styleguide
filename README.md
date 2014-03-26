@@ -13,9 +13,11 @@ __Please note: this plugin is optimised for internal Chrometoaster use. YMMV.__
 
 ### One-time setup, for all projects
 
+1. Open Terminal
+
 #### 1. Install KSS
 
-1. In Terminal: `npm list kss -g`, to check whether you have the kss NPM package installed [[src](http://stackoverflow.com/questions/10972176/find-the-version-of-an-installed-npm-package)]
+1. `npm list kss -g`, to check whether you have the kss NPM package installed [[src](http://stackoverflow.com/questions/10972176/find-the-version-of-an-installed-npm-package)]
 1. If KSS is `(empty)`:
     1. In Terminal: `sudo npm install -g kss`, to instruct NPM to install the KSS binary so that is available globally
 
@@ -23,47 +25,54 @@ __Please note: this plugin is optimised for internal Chrometoaster use. YMMV.__
 
 This project uses the NodeJS implementation of KSS, so you will also need to install `kss-node` from Github:
 
-1. TODO: In Terminal: `???`, to check whether you have this installed
+1. TODO: `???`, to check whether you have this installed
 1. If not:
-    1. In Terminal: `cd /path/to/github-clones`, to change to the directory where you store Git repositories that you clone
-    1. In Terminal: `git clone https://github.com/chrometoasters/kss-node.git`, to clone our copy of `kss-node`
-    1. In Terminal: `cd kss-node`, to change into the directory you just created
-    1. In Terminal: `sudo npm install -g` - to instruct NPM to install the `kss-node` dependencies listed in `package.json`. The `-g` ('global') flag instructs OS X to copy the files to `/usr/local/lib/node_modules/kss/`
+    1. `cd /path/to/github-clones`, to change to the directory where you store Git repositories that you clone
+    1. `git clone https://github.com/chrometoasters/kss-node.git`, to clone our copy of `kss-node`
+    1. `cd kss-node`, to change into the directory you just created
+    1. `sudo npm install -g` - to instruct NPM to install the `kss-node` dependencies listed in `package.json`. The `-g` ('global') flag instructs OS X to copy the files to `/usr/local/lib/node_modules/kss/`
 
 #### 3. Install Grunt and its dependencies
 
 1. If you haven't used Grunt before, please read [Set up Grunt dependencies](https://github.com/chrometoasters/frontend-grunt-boilerplate#set-up-grunt-dependencies).
 
+#### 4. Install Bower
+
+1. `npm list bower -g`, to check whether you have the Bower NPM package installed [[src](http://stackoverflow.com/questions/10972176/find-the-version-of-an-installed-npm-package)]
+1. If Bower is `(empty)`:
+    1. `sudo npm install -g bower`, to install Bower
+
 ### Every time you set up a new project
 
-#### 1. Install the KSS Grunt Task
+1. Open Terminal
 
-1. In Terminal: `npm list bower -g`, to check whether you have the Bower NPM package installed [[src](http://stackoverflow.com/questions/10972176/find-the-version-of-an-installed-npm-package)]
-1. If Bower is `(empty)`:
-    1. In Terminal: `sudo npm install -g bower`, to install Bower
-1. In Terminal: `cd /PATH/TO/PROJECT-THEME-FOLDER`, to change to your project's theme folder
-1. In Terminal: `bower install https://github.com/chrometoasters/ct-grunt-styleguide.git`, to install this Grunt task
+#### 1. Navigate to your project directory
 
-Note: if you wish to customise where Bower puts installed components, you may add a `.bowerrc` file into this folder:
+1. `cd /PATH/TO/PROJECT-THEME-FOLDER`, to change to your project's theme folder
+
+Note: If you wish to customise where Bower puts installed components, you may add a `.bowerrc` file into your project directory:
 
         {
             "directory" : "PATH/TO/COMPONENTS"
         }
 
+This README will assume that you have used the default Bower install path of `bower_components`.
 
-#### 2. Install the KSS Grunt Task's dependencies
+#### 2. Install the KSS Grunt Task and its dependencies
 
-1. Copy `package.json` into your project's theme folder
-1. In Terminal: `cd /PATH/TO/PROJECT-THEME-FOLDER`, to change to your project's theme directory
-1. In Terminal: `npm install`, to install the dependencies listed in `package.json`
+1. `bower install https://github.com/chrometoasters/ct-grunt-styleguide.git`, to install this Grunt task
+1. `cp bower_components/ct-grunt-styleguide/package.json package.json`, to copy `package.json` into your project's theme folder
+1. `npm install`, to install the dependencies listed in `package.json`
 1. SVN/Git ignore the generated folder: `node_modules`
 
 #### 3. Set up the KSS Grunt Task and customise for your project
 
-1. Copy `Gruntfile.js` into your project's theme folder
-1. Copy `grunt-tasks` into your project's theme folder; if this folder already exists you will need to manually merge the files contained within the `options` folder
-1. Open `package.json` and edit the paths to suit your project; note that the `styleguide.src` folder must exist already, but the `styleguide.dest` folder will be created
-1. Create a project template (eg `styleguide.php`) to import the Styleguide page, at the path you specified in `styleguide.page`
+1. `cp bower_components/ct-grunt-styleguide/Gruntfile.js Gruntfile.js`, to copy `Gruntfile.js` into your project's theme folder
+1. `cp -Ri bower_components/ct-grunt-styleguide/grunt-tasks grunt-tasks`, to copy `grunt-tasks` into your project's theme folder; if this folder already exists you will need to manually merge the files contained within the `options` folder
+1. `nano package.json` to open `package.json`
+1. Edit the paths to suit your project; note that the `styleguide.src` folder must exist already, but the `styleguide.dest` folder will be created
+1. `Control + X` (exit) -> `y` (yes) -> `Enter`
+1. Create a project template (eg `styleguide-page.php`) to import the Styleguide page, at the path you specified in `styleguide.page`
 
         // styleguide.php
         <!-- header code here -->
@@ -74,11 +83,18 @@ Note: if you wish to customise where Bower puts installed components, you may ad
         ?>
         <!-- footer code here -->
 
-Note that the styleguide requires jQuery, so it your project header does not include this already you will need to add it.
+Note that the styleguide requires jQuery be present at the top of the page, so if your project `<head>` does not include this already you will need to add it.
 
-### Every time you want to regenerate a styleguide
+#### 4. Run the Grunt
 
-#### 1. Run the Grunt
+1. `grunt styleguide`, to run the Grunt task
 
-1. In Terminal: `cd /PATH/TO/PROJECT-THEME-FOLDER`, to change to the project's theme folder
-1. In Terminal: `grunt styleguide`, to run the Grunt task
+### To run the included tests
+
+#### test-1
+
+1. Perform step 1
+1. Perform step 2
+1. `cp -Ri bower_components/ct-grunt-styleguide/tests/test-1 test-1` to copy the `test-1` folder into the project root
+1. Perform step 3
+1. Perform step 4
