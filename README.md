@@ -11,7 +11,7 @@ __Please note: this plugin is optimised for internal Chrometoaster use. YMMV.__
 
 ## Setup and Usage
 
-### One-time setup, for all projects
+### A. One-time setup, for all projects
 
 1. Open Terminal
 
@@ -42,7 +42,7 @@ This project uses the NodeJS implementation of KSS, so you will also need to ins
 1. If Bower is `(empty)`:
     1. `sudo npm install -g bower`, to install Bower
 
-### Every time you set up a new project
+### B. Every time you set up a new project
 
 1. Open Terminal
 
