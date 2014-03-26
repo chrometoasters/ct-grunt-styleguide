@@ -1,4 +1,4 @@
-# Grunt: Styleguide <sup>v1.1.0</sup>
+# Grunt: Styleguide <sup>v1.2.0</sup>
 
 Chrometoaster's KSS Styleguide generator.
 
