@@ -13,7 +13,7 @@ __Please note: this plugin is optimised for internal Chrometoaster use. YMMV.__
 
 ### A. One-time setup, for all projects
 
-1. Open Terminal
+Open Terminal
 
 #### 1. Install KSS
 
@@ -44,7 +44,7 @@ This project uses the NodeJS implementation of KSS, so you will also need to ins
 
 ### B. Every time you set up a new project
 
-1. Open Terminal
+Open Terminal
 
 #### 1. Navigate to your project directory
 
