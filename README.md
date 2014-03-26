@@ -55,7 +55,7 @@ Note: if you wish to customise where Bower puts installed components, you may ad
 
 1. Copy `package.json` into your project's theme folder
 1. In Terminal: `cd /PATH/TO/PROJECT-THEME-FOLDER`, to change to your project's theme directory
-1. In Terminal: `sudo npm install`, to install the dependencies listed in `package.json`
+1. In Terminal: `npm install`, to install the dependencies listed in `package.json`
 1. SVN/Git ignore the generated folder: `node_modules`
 
 #### Set up the KSS Grunt Task and customise for your project
