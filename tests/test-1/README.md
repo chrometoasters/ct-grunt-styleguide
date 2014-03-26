@@ -4,7 +4,8 @@
 
 ### To run this test
 
-1. Read [the instructions](https://github.com/chrometoasters/ct-grunt-styleguide/blob/master/README.md#every-time-you-set-up-a-new-project)
+1. Read [the instructions](https://github.com/chrometoasters/ct-grunt-styleguide/)
+1. Perform step A as required
 1. Perform step B1
 1. Perform step B2
 1. `cp -Ri bower_components/ct-grunt-styleguide/tests/test-1 test-1` to copy the `test-1` folder into the project root
