@@ -56,7 +56,7 @@ Note: If you wish to customise where Bower puts installed components, you may ad
             "directory" : "PATH/TO/COMPONENTS"
         }
 
-This README will assume that you have used the default Bower install path of `bower_components`.
+This `README` makes the assumption that you have used the default Bower install path of `bower_components`.
 
 #### 2. Install the KSS Grunt Task and its dependencies
 
@@ -88,13 +88,3 @@ Note that the styleguide requires jQuery be present at the top of the page, so i
 #### 4. Run the Grunt
 
 1. `grunt styleguide`, to run the Grunt task
-
-### To run the included tests
-
-#### test-1
-
-1. Perform step 1
-1. Perform step 2
-1. `cp -Ri bower_components/ct-grunt-styleguide/tests/test-1 test-1` to copy the `test-1` folder into the project root
-1. Perform step 3
-1. Perform step 4
