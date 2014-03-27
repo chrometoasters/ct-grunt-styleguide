@@ -88,3 +88,8 @@ Note that the styleguide requires jQuery be present at the top of the page, so i
 #### 4. Run the Grunt
 
 1. `grunt styleguide`, to run the Grunt task
+
+### C. To update the styleguide template to the latest version
+
+1. Perform step B1
+2. Perform step B2.1
