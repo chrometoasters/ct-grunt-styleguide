@@ -94,4 +94,5 @@ Note that the styleguide requires jQuery be present at the top of the page, so i
 #### 1. To update the styleguide template to the latest version
 
 1. Perform step B1
-2. Perform step B2.1
+1. Perform step B2.1
+1. Perform step B4

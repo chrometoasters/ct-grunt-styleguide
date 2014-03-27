@@ -197,6 +197,8 @@
 		float: none !important;
 	}
 
+	.styleguide-modifier-label.open > a:hover,
+	.styleguide-modifier-label.open > a:focus,
 	.styleguide-modifier-label.close > a:hover,
 	.styleguide-modifier-label.close > a:focus {
 		text-decoration: none !important;
