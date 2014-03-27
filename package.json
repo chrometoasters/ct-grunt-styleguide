@@ -10,16 +10,16 @@
     "url": "http://github.com/chrometoasters/ct-grunt-styleguide.git"
   },
   "project": {
-    "name":             "BRANZ Build",
-    "banner":           "",
-    "document_root":    "htdocs",
+    "name":           "Site Name",
+    "banner":         "",
+    "document_root":  "htdocs",
     "styleguide":   {
-      "template":       "vendors/ct-grunt-styleguide/template",
-      "src":            "css",
-      "dest":           "styleguide",
-      "page":           "html/page-styleguide.php",
-      "width":          "922px",
-      "designs":        ""
+      "template":     "bower_components/ct-grunt-styleguide/template",
+      "src":          "css",
+      "dest":         "styleguide",
+      "page":         "styleguide-page.php",
+      "width":        "922px",
+      "designs":      ""
     }
   },
   "devDependencies": {
