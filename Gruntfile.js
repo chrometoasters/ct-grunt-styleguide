@@ -59,6 +59,8 @@ module.exports = function(grunt) {
     env: process.env
   };
 
+  // paths are usually relative to Gruntfile.js, which may be in a theme folder rather than the document root
+  // so path_from_document_root is used for PHP and CSS/JS includes
   config.pkg.project.path_from_document_root = config.project_root.split( config.pkg.project.document_root + '/' )[1];
   //grunt.log.write( 'test: ' + config.pkg.project.path_from_document_root );
 
