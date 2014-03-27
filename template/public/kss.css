@@ -103,6 +103,7 @@
 	    text-align: right !important;
 	}
 
+	.styleguide-html-examples-header > h3 > .styleguide-anchor,
 	.styleguide-html-examples-header > h3 > .styleguide-anchor:hover,
 	.styleguide-html-examples-header > h3 > .styleguide-anchor:focus {
 		color: #000 !important;
