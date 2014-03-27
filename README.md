@@ -64,6 +64,7 @@ This `README` makes the assumption that you have used the default Bower install 
 1. `cp bower_components/ct-grunt-styleguide/package.json package.json`, to copy `package.json` into your project's theme folder
 1. `npm install`, to install the dependencies listed in `package.json`
 1. SVN/Git ignore the generated folder: `node_modules`
+1. If you are using SVN, ignore the generated folder: `bower_components` ([bower #1194](https://github.com/bower/bower/issues/1194))
 
 #### 3. Set up the KSS Grunt Task and customise for your project
 

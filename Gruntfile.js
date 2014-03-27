@@ -62,6 +62,13 @@ module.exports = function(grunt) {
   // paths are usually relative to Gruntfile.js, which may be in a theme folder rather than the document root
   // so path_from_document_root is used for PHP and CSS/JS includes
   config.pkg.project.path_from_document_root = config.project_root.split( config.pkg.project.document_root + '/' )[1];
+
+  // if there is a path, then we are not in the root, and we are in a sub folder
+  if ( config.pkg.project.path_from_document_root.length > 0 ) {
+    // add a forward slash to navigate into the subfolder
+    config.pkg.project.path_from_document_root += '/';
+  }
+
   //grunt.log.write( 'test: ' + config.pkg.project.path_from_document_root );
 
   grunt.util._.extend(config, loadConfig('./grunt-tasks/options/'));

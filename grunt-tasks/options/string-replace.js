@@ -12,13 +12,13 @@ module.exports = {
           replacement: '<%= pkg.project.styleguide.designs %>'
         }, {
           pattern: '{{PROJECT_STYLEGUIDE_FOLDER}}',
-          replacement: '<%= pkg.project.path_from_document_root %>/<%= pkg.project.styleguide.dest %>'
+          replacement: '<%= pkg.project.path_from_document_root %><%= pkg.project.styleguide.dest %>'
         }, {
           pattern: '{{PROJECT_STYLEGUIDE_PAGE}}',
-          replacement: '<%= pkg.project.path_from_document_root %>/<%= pkg.project.styleguide.page %>/'
+          replacement: '<%= pkg.project.path_from_document_root %><%= pkg.project.styleguide.page %>/'
         }, {
           pattern: '{{PROJECT_STYLEGUIDE_ASSETS_FOLDER}}',
-          replacement: '<%= pkg.project.path_from_document_root %>/<%= pkg.project.styleguide.dest %>/assets'
+          replacement: '<%= pkg.project.path_from_document_root %><%= pkg.project.styleguide.dest %>/assets'
         }, {
           pattern: '{{PROJECT_STYLEGUIDE_WIDTH}}',
           replacement: '<%= pkg.project.styleguide.width %>'
