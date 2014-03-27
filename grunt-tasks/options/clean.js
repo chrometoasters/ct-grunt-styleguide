@@ -1,7 +1,7 @@
 module.exports = {
   // removes .svn files copied with public directory
   // https://github.com/hughsk/kss-node/issues/40
-  styleguide_data: {
+  styleguide: {
       src: [
           "<%= pkg.project.styleguide.dest %>/data/*.html"
       ]

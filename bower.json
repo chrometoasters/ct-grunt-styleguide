@@ -1,7 +1,7 @@
 {
     "name": "ct-grunt-styleguide",
     "description": "Chrometoaster's KSS Styleguide Generator",
-    "version": "1.0.0",
+    "version": "1.2.0",
     "main": "dist",
     "license": "",
     "ignore": [],

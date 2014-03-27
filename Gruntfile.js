@@ -59,6 +59,9 @@ module.exports = function(grunt) {
     env: process.env
   };
 
+  config.pkg.project.path_from_document_root = config.project_root.split( config.pkg.project.document_root + '/' )[1];
+  //grunt.log.write( 'test: ' + config.pkg.project.path_from_document_root );
+
   grunt.util._.extend(config, loadConfig('./grunt-tasks/options/'));
 
   grunt.initConfig(config);

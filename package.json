@@ -1,7 +1,7 @@
 {
   "name": "ct-grunt-styleguide",
   "description": "Chrometoaster's KSS Styleguide Generator",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "author": "Dan Smith (dan.smith@chrometoaster.com)",
   "homepage": "http://github.com/chrometoasters/ct-grunt-styleguide",
   "bugs": "http://github.com/chrometoasters/ct-grunt-styleguide/issues",
@@ -10,16 +10,16 @@
     "url": "http://github.com/chrometoasters/ct-grunt-styleguide.git"
   },
   "project": {
-    "name":         "Site Name",
-    "banner":       "",
-    "resources":    "/path/to/theme",
+    "name":             "BRANZ Build",
+    "banner":           "",
+    "document_root":    "htdocs",
     "styleguide":   {
-      "template":     "vendor/ct-grunt-styleguide/template",
-      "src":          "path/to/css",
-      "dest":         "styleguide",
-      "page":         "/path/to/styleguide",
-      "width":        "922px",
-      "designs":      ""
+      "template":       "vendors/ct-grunt-styleguide/template",
+      "src":            "css",
+      "dest":           "styleguide",
+      "page":           "html/page-styleguide.php",
+      "width":          "922px",
+      "designs":        ""
     }
   },
   "devDependencies": {
