@@ -3,9 +3,10 @@ module.exports = {
   // https://github.com/hughsk/kss-node/issues/40
   styleguide: {
       src: [
-          "<%= pkg.project.styleguide.dest %>/**/*",
-          "!<%= pkg.project.styleguide.dest %>/index.php",
-          "!<%= pkg.project.styleguide.dest %>/**/*.svn"
+          "<%= pkg.project.styleguide.dest %>/data/*",
+          "<%= pkg.project.styleguide.dest %>/assets/*",
+          "!<%= pkg.project.styleguide.dest %>/data/*.svn",
+          "!<%= pkg.project.styleguide.dest %>/assets/*.svn"
       ]
   },
   // delete the public folder created by kss, as our custom index.html references template/public rather than data/public
