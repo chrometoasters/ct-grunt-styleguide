@@ -80,7 +80,9 @@
 	.styleguide-html-examples-header > h3 {
 		font-family: "Graphik";
 		font-weight: bold !important;
+		font-style: normal !important;
 		font-size: 22px !important;
+		color: #fff !important;
 		padding: 1em 19px !important;
 		margin: 0 170px 0 0 !important;
 	}
@@ -104,6 +106,7 @@
 	.styleguide-html-examples-header > h3 > .styleguide-anchor:hover,
 	.styleguide-html-examples-header > h3 > .styleguide-anchor:focus {
 		color: #000 !important;
+		text-decoration: none !important;
 	}
 
 	.styleguide-html-examples-header > h3 > .styleguide-anchor:hover:before {
@@ -187,6 +190,16 @@
 
 	.styleguide-modifier-classname-description {
 		display: block; /* remove preceding whitespace */
+	}
+
+	.styleguide-modifier-label.open,
+	.styleguide-modifier-label.close {
+		float: none !important;
+	}
+
+	.styleguide-modifier-label.close > a:hover,
+	.styleguide-modifier-label.close > a:focus {
+		text-decoration: none !important;
 	}
 
 	.styleguide-modifier-classname-description p,
@@ -368,6 +381,11 @@
 		color: #fff !important;
 		text-decoration: none;
 		font-size: 13px;
+	}
+
+	.styleguide-m-link-top {
+		margin-top: 20px !important;
+		font-size: 13px !important;
 	}
 
 /* helpers useful in styleguides */
