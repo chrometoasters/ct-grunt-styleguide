@@ -4,7 +4,8 @@ module.exports = {
   styleguide: {
       src: [
           "<%= pkg.project.styleguide.dest %>/**/*",
-          "!<%= pkg.project.styleguide.dest %>/index.php"
+          "!<%= pkg.project.styleguide.dest %>/index.php",
+          "!<%= pkg.project.styleguide.dest %>/**/*.svn"
       ]
   },
   // delete the public folder created by kss, as our custom index.html references template/public rather than data/public
