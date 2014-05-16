@@ -9,7 +9,7 @@ __Please note: this plugin is optimised for internal Chrometoaster use. YMMV.__
 * KSS - Knyle Style Sheets; if you're unfamiliar with KSS, please read our [docs](https://github.com/chrometoasters/ct-grunt-styleguide/blob/master/docs/kss/README.md)
 * NPM - the Node Package Manager, installed with NodeJS
 
-## Setup and Usage
+## Setup and Basic usage
 
 ### A. One-time setup, for all projects
 
@@ -99,3 +99,36 @@ Note that the styleguide requires jQuery be present at the top of the page, so i
 1. Perform step B4
 1. If you see `Fatal error: Unable to find local grunt.`, perform step B2.3
 1. Perform step B4
+
+## Advanced Usage
+
+### 'Pixel Perfect' style design overlays
+
+You may optionally add the following line of code above your HTML snippet. This will position the design above your component, with controls to change the opacity and toggle the overlay layer off.
+
+    /*
+    Module: Modulename
+
+    Markup:
+    <div class="sg-overlay" draggable="true" data-current="true" data-img="MOE-IE-Guide-page-v14.jpg" data-img-w="1500" data-el-w="770" data-el-h="380" data-el-x="-951" data-el-y="4855"></div>
+    include "my-module-snippet.html"
+    
+    Styleguide 123.4
+    */
+    
+#### Options:
+
+*Source: `ct-docs.js`*
+    
+Required options:
+
+1. `data-img` - filename of the design image, relative to a `designs_path` of `/PROJECT_RESOURCES_PATH/build/designs/`
+1. `data-img-w` - the pixel width of the design image
+    
+Optional options:
+
+1. `data-current` - `false`|`true` - toggle to true to indicate that the design has been updated since the CSS was last checked
+1. `data-el-w` - the pixel width of the design element, defaults to the width of the parent container
+1. `data-el-h` - the pixel height of the design element, defaults to the height of the parent container
+1. `data-el-x` - the pixel distance to move the design image to the left (defaults to half of the design width), defaults to zero; use a negative value for design elements located to left of center
+1. `data-el-y` - the pixel distance between the top of the design image and the top of the design element, defaults to zero
