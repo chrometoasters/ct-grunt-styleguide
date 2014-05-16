@@ -104,7 +104,7 @@ Note that the styleguide requires jQuery be present at the top of the page, so i
 
 ### 'Pixel Perfect' style design overlays
 
-You may optionally add the following line of code above your HTML snippet. This will position the design above your component, with controls to change the opacity and toggle the overlay layer off.
+You may optionally specify an `sg-overlay` before your snippet HTML. This will position the design above your component, with controls to change the opacity and toggle the overlay layer off.
 
     /*
     Module: Modulename
