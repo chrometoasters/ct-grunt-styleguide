@@ -68,7 +68,7 @@ This `README` makes the assumption that you have used the default Bower install 
 
 #### 3. Set up the KSS Grunt Task and customise for your project
 
-**Note:** KSS comments are stripped when CSS is compressed. Therefore it's better to set the `src` to your `scss` folder. 
+**Note:** KSS comments are stripped when CSS is compressed. For this reason it's best to set the `src` to your `scss` folder. 
 
 1. `cp bower_components/ct-grunt-styleguide/Gruntfile.js Gruntfile.js`, to copy `Gruntfile.js` into your project's theme folder
 1. `cp -Ri bower_components/ct-grunt-styleguide/grunt-tasks grunt-tasks`, to copy `grunt-tasks` into your project's theme folder; if this folder already exists you will need to manually merge the files contained within the `options` folder
