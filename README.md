@@ -78,6 +78,7 @@ This `README` makes the assumption that you have used the default Bower install 
 1. Create a project template (eg `styleguide-page.php`) to import the Styleguide page, at the path you specified in `styleguide.page`
 
         // styleguide.php
+        // NOTE: DOCUMENT_ROOT is the site root, not your theme root
         <!-- header code here -->
         <?php
             // START KSS STYLEGUIDE
