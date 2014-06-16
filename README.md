@@ -134,3 +134,7 @@ Optional options:
 1. `data-el-h` - the pixel height of the design element, defaults to the height of the parent container
 1. `data-el-x` - the pixel distance to move the design image to the left (defaults to half of the design width), defaults to zero; use a negative value for design elements located to left of center
 1. `data-el-y` - the pixel distance between the top of the design image and the top of the design element, defaults to zero
+
+## Troubleshooting
+
+1. You may use `console.log` within `Gruntfile.js` to check paths
